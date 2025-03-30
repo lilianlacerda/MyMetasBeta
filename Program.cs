@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyMetasBeta.View;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace MyMetasBeta
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TelaLogin());
+            Application.Run(new TelaCadastro());
         }
     }
 }

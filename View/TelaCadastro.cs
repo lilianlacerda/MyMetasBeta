@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyMetasBeta.Controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,30 @@ namespace MyMetasBeta.View
 {
     public partial class TelaCadastro: Form
     {
+        private readonly UsuarioController _usuarioController;
         public TelaCadastro()
         {
             InitializeComponent();
+            _usuarioController = new UsuarioController();
+        }
+
+        private void btnConcluirCadastro_Click(object sender, EventArgs e)
+        {
+            bool sucesso = _usuarioController.CadastrarUsuario(
+                textBoxNome.Text,
+                textBoxLogin.Text,
+                textBoxSenha.Text);
+
+            if (sucesso)
+            {
+                MessageBox.Show("Usuario cadastrado com sucesso!", "Cadastro concluido");
+                this.Close();
+                new TelaLogin().Show();
+            }
+            else
+            {
+                MessageBox.Show("Erro ao efetuar o cadastro.");
+            }
         }
     }
 }

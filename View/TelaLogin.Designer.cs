@@ -38,7 +38,7 @@
             // 
             // textBoxLogin
             // 
-            this.textBoxLogin.Location = new System.Drawing.Point(284, 127);
+            this.textBoxLogin.Location = new System.Drawing.Point(280, 165);
             this.textBoxLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxLogin.Name = "textBoxLogin";
             this.textBoxLogin.Size = new System.Drawing.Size(201, 22);
@@ -46,7 +46,7 @@
             // 
             // textBoxSenha
             // 
-            this.textBoxSenha.Location = new System.Drawing.Point(284, 195);
+            this.textBoxSenha.Location = new System.Drawing.Point(280, 233);
             this.textBoxSenha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxSenha.Name = "textBoxSenha";
             this.textBoxSenha.Size = new System.Drawing.Size(201, 22);
@@ -54,28 +54,30 @@
             // 
             // btnEntrar
             // 
-            this.btnEntrar.Location = new System.Drawing.Point(284, 240);
+            this.btnEntrar.Location = new System.Drawing.Point(280, 278);
             this.btnEntrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(82, 28);
+            this.btnEntrar.Size = new System.Drawing.Size(89, 28);
             this.btnEntrar.TabIndex = 2;
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.UseVisualStyleBackColor = true;
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
             // btnCadastrarUsuario
             // 
-            this.btnCadastrarUsuario.Location = new System.Drawing.Point(405, 240);
+            this.btnCadastrarUsuario.Location = new System.Drawing.Point(392, 278);
             this.btnCadastrarUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCadastrarUsuario.Name = "btnCadastrarUsuario";
-            this.btnCadastrarUsuario.Size = new System.Drawing.Size(80, 28);
+            this.btnCadastrarUsuario.Size = new System.Drawing.Size(89, 28);
             this.btnCadastrarUsuario.TabIndex = 3;
-            this.btnCadastrarUsuario.Text = "Concluir";
+            this.btnCadastrarUsuario.Text = "Cadastre-se";
             this.btnCadastrarUsuario.UseVisualStyleBackColor = true;
+            this.btnCadastrarUsuario.Click += new System.EventHandler(this.btnCadastrarUsuario_Click);
             // 
             // lblLogin
             // 
             this.lblLogin.AutoSize = true;
-            this.lblLogin.Location = new System.Drawing.Point(284, 107);
+            this.lblLogin.Location = new System.Drawing.Point(280, 145);
             this.lblLogin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLogin.Name = "lblLogin";
             this.lblLogin.Size = new System.Drawing.Size(40, 16);
@@ -85,7 +87,7 @@
             // lblSenha
             // 
             this.lblSenha.AutoSize = true;
-            this.lblSenha.Location = new System.Drawing.Point(284, 176);
+            this.lblSenha.Location = new System.Drawing.Point(280, 214);
             this.lblSenha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSenha.Name = "lblSenha";
             this.lblSenha.Size = new System.Drawing.Size(46, 16);
@@ -106,6 +108,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "TelaLogin";
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.TelaLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

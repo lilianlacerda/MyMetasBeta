@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MyMetasBeta.View;
+using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,22 @@ namespace MyMetasBeta
         public TelaLogin()
         {
             InitializeComponent();
+        }
+
+        private void TelaLogin_Load(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btnEntrar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCadastrarUsuario_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new TelaCadastro().Show();
         }
     }
 }
