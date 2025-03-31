@@ -1,5 +1,6 @@
 ﻿using MyMetasBeta.Model;
 using MyMetasBeta.Model.Repository;
+using MyMetasBeta.View;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,8 +18,9 @@ namespace MyMetasBeta.Controller
             _usuarioRepository = new UsuarioRepository(new Model.BancoDeDados());
         }
 
-        public bool CadastrarUsuario(string nome, string login, string senha)
+        public bool CadastrarUsuario(string nome, string login, string senha, string confirmacaoSenha)
         {
+
             Usuario usuario = new Usuario
             {
                 Nome = nome,
@@ -31,10 +33,39 @@ namespace MyMetasBeta.Controller
                 _usuarioRepository.CadastrarUsuario(usuario);
                 return true;
             }
+            catch(Exception ex)
+            {
+                return false;
+            }
+        }
+
+        public bool ValidarCadastro(string senha, string confirmacaoSenha, string login)
+        {
+            if (senha != confirmacaoSenha)
+            {
+                return false;
+            }
+
+            if (_usuarioRepository.CadastroExistente(login))
+            {
+                return false;
+            }
+
+            try
+            {
+                _usuarioRepository.CadastroExistente(login);
+                return true;
+            }
             catch
             {
                 return false;
             }
+
+        }
+
+        public bool ValidarLogin(string login, string senha)
+        {
+            if (_usuarioRepository.LoginUsuario()) ;
         }
     }
 }

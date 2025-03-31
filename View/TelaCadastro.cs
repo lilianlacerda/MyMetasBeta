@@ -25,8 +25,18 @@ namespace MyMetasBeta.View
             bool sucesso = _usuarioController.CadastrarUsuario(
                 textBoxNome.Text,
                 textBoxLogin.Text,
-                textBoxSenha.Text);
+                textBoxSenha.Text,
+                textBoxConfirmacaoSenha.Text);
 
+            bool validacao = _usuarioController.ValidarCadastro(
+                textBoxLogin.Text,
+                textBoxSenha.Text,
+                textBoxConfirmacaoSenha.Text);
+
+            if (validacao)
+            {
+                MessageBox.Show("Usuario não cadastrado");
+            }
             if (sucesso)
             {
                 MessageBox.Show("Usuario cadastrado com sucesso!", "Cadastro concluido");
