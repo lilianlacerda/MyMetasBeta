@@ -12,7 +12,7 @@ namespace MyMetasBeta.Model
     class BancoDeDados
     {
         //Conexão com o banco de dados (teste).
-        private string _conexao = "server=localhost;database=mymetasdb;uid=root;pwd=lilian0212;";
+        private string _conexao = "server=localhost;database=mymetasdb;uid=root;pwd=;";
 
         //Metodo para executar SELECTS e retornar tabelas de dados.
         public DataTable ExecutarConsultas(string sql)

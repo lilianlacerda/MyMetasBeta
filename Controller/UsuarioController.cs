@@ -63,9 +63,9 @@ namespace MyMetasBeta.Controller
 
         }
 
-        public bool ValidarLogin(string login, string senha)
-        {
-            if (_usuarioRepository.LoginUsuario()) ;
-        }
+        //public bool ValidarLogin(string login, string senha)
+        //{
+        //    if (_usuarioRepository.LoginUsuario()) ;
+        //}
     }
 }
