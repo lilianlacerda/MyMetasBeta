@@ -33,7 +33,7 @@ namespace MyMetasBeta.Controller
                 _usuarioRepository.CadastrarUsuario(usuario);
                 return true;
             }
-            catch(Exception ex)
+            catch(Exception ex )
             {
                 return false;
             }

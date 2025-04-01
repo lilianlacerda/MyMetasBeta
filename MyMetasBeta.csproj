@@ -106,6 +106,12 @@
     <Compile Include="Model\BancoDeDados.cs" />
     <Compile Include="Model\Repository\UsuarioRepository.cs" />
     <Compile Include="Model\Usuario.cs" />
+    <Compile Include="View\TesteAulas\Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TesteAulas\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\TelaCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +138,15 @@
     <Compile Include="View\TelaPrincipal.Designer.cs">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\TesteAulas\Teste.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TesteAulas\Teste.Designer.cs">
+      <DependentUpon>Teste.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\TesteAulas\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\TelaCadastro.resx">
       <DependentUpon>TelaCadastro.cs</DependentUpon>
     </EmbeddedResource>
@@ -150,6 +165,9 @@
     <EmbeddedResource Include="View\TelaPerfil.resx">
       <DependentUpon>TelaPerfil.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\TesteAulas\Teste.resx">
+      <DependentUpon>Teste.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -164,6 +182,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="View\TesteAulas\MetodoAssincrono.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

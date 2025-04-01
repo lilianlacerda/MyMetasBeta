@@ -1,13 +1,5 @@
-﻿using MyMetasBeta.View;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace MyMetasBeta
-{
-    static class Program
+Na program: 
+ static class Program
     {
         /// <summary>0
         /// Ponto de entrada principal para o aplicativo.
@@ -29,4 +21,22 @@ namespace MyMetasBeta
             }
         }
     }
-}
+
+    -----------------------------
+    Na tela: 
+
+    public partial class Teste: Form
+    {
+        public Teste()
+        {
+            InitializeComponent();
+            CloseTeste();
+        }
+
+        //Metodos assincronas 
+        private async void CloseTeste()
+        {
+            await Task.Delay(500);
+            this.Close();
+        }
+    }
