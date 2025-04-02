@@ -71,6 +71,10 @@ namespace MyMetasBeta.Model
             {
                 MessageBox.Show("Erro ao executar comando: " + ex.Message);
             }
+            finally
+            {
+
+            }
 
             return linhasAfetadas;
         }

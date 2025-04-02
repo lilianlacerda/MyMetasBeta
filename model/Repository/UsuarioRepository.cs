@@ -16,11 +16,24 @@ namespace MyMetasBeta.Model.Repository
             _banco = banco;
         }
 
-        public void CadastrarUsuario(Usuario novoUsuario)
+        public bool CadastrarUsuario(Usuario novoUsuario)
         {
             string sql = $@"INSERT INTO usuarios(nome, login, senha) VALUES ('{novoUsuario.Nome}', '{novoUsuario.Login}', '{novoUsuario.Senha}')";
 
-            _banco.ExecutarComando(sql);
+            try
+            {
+                if(_banco.ExecutarComando(sql) == 0)
+                {
+                    return false;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+
+            return true;
         }
 
         public bool CadastroExistente(string login)
@@ -30,6 +43,8 @@ namespace MyMetasBeta.Model.Repository
             DataTable resultado = _banco.ExecutarConsultas(sql);
             //O Rows.Count indica quantos registros foram encontrados. Se for 0, seginifica que a consulta não encontrou resultados.
             return resultado.Rows.Count > 0;
+
+
         }
 
         public bool LoginUsuario(string login, string senha)

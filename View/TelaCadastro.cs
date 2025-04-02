@@ -1,4 +1,5 @@
 ﻿using MyMetasBeta.Controller;
+using MyMetasBeta.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,6 +23,11 @@ namespace MyMetasBeta.View
 
         private void btnConcluirCadastro_Click(object sender, EventArgs e)
         {
+            Usuario usuario = new Usuario();
+
+            Home home = new Home(usuario: usuario);
+            home.ShowDialog();
+
             bool sucesso = _usuarioController.CadastrarUsuario(
                 textBoxNome.Text,
                 textBoxLogin.Text,
@@ -37,7 +43,7 @@ namespace MyMetasBeta.View
             {
                 MessageBox.Show("Usuario não cadastrado");
             }
-            if (sucesso)
+            else if (sucesso)
             {
                 MessageBox.Show("Usuario cadastrado com sucesso!", "Cadastro concluido");
                 this.Close();

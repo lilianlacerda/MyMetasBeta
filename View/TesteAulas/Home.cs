@@ -7,19 +7,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MyMetasBeta.Model;
 
 namespace MyMetasBeta.View
 {
     public partial class Home: Form
     {
+
+       public Usuario usuario;
+
+       
         public Home()
         {
             InitializeComponent();
         }
 
+        public Home(Usuario usuario)
+        {
+            this.usuario = usuario;
+        }
+
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
-
+            //TextBox.Text = usuario.Nome;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

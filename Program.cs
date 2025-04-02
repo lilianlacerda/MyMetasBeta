@@ -21,7 +21,7 @@ namespace MyMetasBeta
             Home home = new Home();
             Teste teste = new Teste();
 
-            Application.Run(teste);
+            Application.Run(new TelaCadastro());
 
             if (teste.IsDisposed)
             {

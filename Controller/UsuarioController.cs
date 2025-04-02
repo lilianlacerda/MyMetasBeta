@@ -28,15 +28,7 @@ namespace MyMetasBeta.Controller
                 Senha = senha
             };
 
-            try
-            {
-                _usuarioRepository.CadastrarUsuario(usuario);
-                return true;
-            }
-            catch(Exception ex )
-            {
-                return false;
-            }
+            return _usuarioRepository.CadastrarUsuario(usuario);
         }
 
         public bool ValidarCadastro(string senha, string confirmacaoSenha, string login)
